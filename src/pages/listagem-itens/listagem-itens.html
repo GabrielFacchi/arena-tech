@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-align:center">Lista de itens</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of itens">
+      <div *ngIf="tipo == 'totalGanhos'">
+        <h3><b>{{item.titulo}}</b></h3>
+        <h4>{{item.local}}</h4>
+        <p item-end>R$ {{item.valor}}</p>
+      </div>
+
+      <div *ngIf="tipo != 'totalGanhos'" style="white-space: normal !important;">
+          <p>{{item.descricao}}</p>
+          <p item-end>R$ {{item.valor}}</p>
+      </div>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

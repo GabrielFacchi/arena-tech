@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center">Julius</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+
+  <ion-card class="card-click" (click)="abrirListagem('totalGanhos')">
+    <ion-card-content>
+      <ion-card-title style="text-align:center">
+          Você economizou
+      </ion-card-title>
+        <P style="text-align: center">R$ {{totalGanhos | number}}</P>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-click" (click)="abrirListagem('deixouDeGanhar')">
+    <ion-card-content>
+      <ion-card-title style="text-align:center">
+          Deixou de economizar
+        </ion-card-title>
+        <P style="text-align: center">R$ {{deixouDeGanhar | number}}</P>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
